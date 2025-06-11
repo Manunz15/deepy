@@ -1,0 +1,10 @@
+.gitattributes
+models/*
+!.models/fnn_mnist/epoch_3
+!.models/fnn_mnist/epoch_24
+!.models/cnn_mnist/epoch_1
+!.models/cnn_mnist/epoch_24
+!.models/fnn_simpson/epoch_23
+!.models/fnn_simpson/epoch_49
+!.models/cnn_simpson/epoch_9
+!.models/cnn_simpson/epoch_49
