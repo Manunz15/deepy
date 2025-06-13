@@ -66,7 +66,7 @@ class Network:
     def plot_validation(self, metric: str = 'accuracy') -> None:
         title, train, val = {'accuracy': ('Accuracy', self.train_accuracy, self.val_accuracy),
                              'cost':     ('Cost function', self.J_train, self.J_val)}[metric]
-        plt.plot(train, label = 'Training', c = "#1679fa")
+        plt.plot(train, label = 'Train', c = "#1679fa")
         plt.plot(val, label = 'Validation', c = "#fa4716")
         plt.xlabel('Epoch', fontweight = 'bold')
         plt.ylabel(title, fontweight = 'bold')
@@ -77,7 +77,7 @@ class Network:
     def plot_train(self) -> None:
         plt.plot(self.every_J, c = '#1679fa')
         plt.xlabel('Batch', fontweight = 'bold')
-        plt.ylabel('Training cost function', fontweight = 'bold')
+        plt.ylabel('Train cost function', fontweight = 'bold')
         plt.show()
 
     def pred(self, X: np.ndarray, threshold: float = 0.5) -> int | np.ndarray:
