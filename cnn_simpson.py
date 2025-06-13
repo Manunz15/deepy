@@ -1,7 +1,7 @@
 from modules import Network
 from modules.fnn import Dense, Flatten
 from modules.cnn import Conv3D
-from modules.utils import ReLU, LeakyReLU, SOFTMAX, CrossEntropy, plot_conf
+from modules.utils import ReLU, LReLU, SOFTMAX, CrossEntropy, plot_conf
 from modules.datasets import simpson
 
 # mnist
@@ -12,13 +12,13 @@ train_DF, val_DF, test_DF, labels = simpson()
 #     Conv3D(kernel_shape = (5, 5), 
 #                      input_channels = 3, 
 #                      output_channels = 8, 
-#                      activation = LeakyReLU(),
+#                      activation = LReLU(),
 #                      mode = 'same'),
 
 #     Conv3D(kernel_shape = (7, 7), 
 #                     input_channels = 8, 
 #                     output_channels = 3, 
-#                     activation = LeakyReLU(),
+#                     activation = LReLU(),
 #                     mode = 'same'),
 #     Flatten(),
 #     Dense(28 * 28 * 3, 500, ReLU()), 

@@ -1,4 +1,4 @@
-from modules.utils.activation import Identity, HiddenSigmoid, Sigmoid, ReLU, LeakyReLU, SOFTMAX
+from modules.utils.activation import Identity, HiddenSigmoid, Sigmoid, ReLU, LReLU, SOFTMAX
 from modules.utils.cost import MSE, CrossEntropy
 from modules.utils.initialization import  Naive, He
 from modules.utils.misc import *
