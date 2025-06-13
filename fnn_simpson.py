@@ -13,7 +13,6 @@ train_DF, val_DF, test_DF, labels = simpson()
 #     Dense(500, 400, ReLU()),
 #     Dense(400, 10, SOFTMAX())],
 #     cost_func = CrossEntropy(),
-#     task = 'classification',
 #     save = 'models/fnn_simpson')
 
 # net.fit(train_DF, val_DF, 

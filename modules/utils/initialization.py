@@ -14,18 +14,7 @@ class Naive(Initialization):
         
         super().__init__('Naive', inizialize)
 
-class Uniform(Initialization):
-    # He inizialization
-    def __init__(self) -> None:
-        def inizialize(n: int, w_shape: tuple[int], b_shape: int) -> tuple:
-            epsilon: str = np.sqrt(2 / n)
-            w: np.ndarray = np.random.uniform(- epsilon, epsilon, size = w_shape)
-            b: int | np.ndarray = 0 if b_shape == 1 else np.zeros(b_shape)
-            return w, b
-        
-        super().__init__('Uniform', inizialize)
-
-class Gaussian(Initialization):
+class He(Initialization):
     # He inizialization
     def __init__(self) -> None:
         def inizialize(n: int, w_shape: tuple[int], b_shape: int) -> tuple:
@@ -34,4 +23,4 @@ class Gaussian(Initialization):
             b: int | np.ndarray = 0 if b_shape == 1 else np.zeros(b_shape)
             return w, b
         
-        super().__init__('Gaussian', inizialize)
+        super().__init__('He', inizialize)

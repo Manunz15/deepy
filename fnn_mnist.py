@@ -15,7 +15,6 @@ train_DF, val_DF, test_DF, labels = mnist()
 #     Dense(100, 20, ReLU()),
 #     Dense(20, 10, SOFTMAX())],
 #     cost_func = CrossEntropy(),
-#     task = 'classification',
 #     save = 'models/fnn_mnist')
 
 # net.fit(train_DF, val_DF, 
