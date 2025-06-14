@@ -20,10 +20,13 @@ train_DF, val_DF, test_DF, labels = simpson()
 #         epochs = 50, 
 #         learning_rate = 0.1)
 
-# metrics
-net: Network = Network.load('models/fnn_simpson/epoch_23.dpy')
-print(f'Test accuracy: {net.calc_accuracy(test_DF):.1f}%')
-plot_conf(net.calc_confusion_matrix(test_DF), labels)
+# full trained
+net: Network = Network.load('models/fnn_simpson/epoch_49.dpy')
 net.plot_train()
 net.plot_validation('cost')
 net.plot_validation('accuracy')
+
+# optimal
+net: Network = Network.load('models/fnn_simpson/epoch_23.dpy')
+print(f'Test accuracy: {net.calc_accuracy(test_DF):.1f}%')
+plot_conf(net.calc_confusion_matrix(test_DF), labels)

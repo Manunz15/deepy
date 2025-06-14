@@ -14,7 +14,7 @@ class Naive(Initialization):
         
         super().__init__('Naive', inizialize)
 
-class He(Initialization):
+class Gaussian(Initialization):
     # He inizialization
     def __init__(self) -> None:
         def inizialize(n: int, w_shape: tuple[int], b_shape: int) -> tuple:
@@ -23,4 +23,4 @@ class He(Initialization):
             b: int | np.ndarray = 0 if b_shape == 1 else np.zeros(b_shape)
             return w, b
         
-        super().__init__('He', inizialize)
+        super().__init__('He Gaussian', inizialize)

@@ -1,5 +1,5 @@
 from modules.utils.activation import Activation
-from modules.utils.initialization import Initialization, He, Naive
+from modules.utils.initialization import Initialization, Gaussian, Naive
 from modules.utils.misc import read_kwargs
 
 import numpy as np
@@ -10,9 +10,9 @@ class Layer:
         self.activation: Activation | None = activation
         self.kwargs = kwargs
 
-        init_name: str = read_kwargs(kwargs, 'init', 'he')
+        init_name: str = read_kwargs(kwargs, 'init', 'gaussian')
         self.init: Initialization = {'naive': Naive(),
-                                     'he': He()
+                                     'gaussian': Gaussian()
                                      }[init_name]
 
     def forward(self, X: np.ndarray) -> None:

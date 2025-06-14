@@ -58,7 +58,7 @@ class ReLU(Activation):
         
         super().__init__('ReLU', func, deriv)
 
-class LReLU(Activation):
+class LeakyReLU(Activation):
     def __init__(self, alpha: float = 0.01) -> None:
         self.alpha: float = alpha
         def func(z: np.ndarray) -> np.ndarray:
